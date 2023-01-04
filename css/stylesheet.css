@@ -37,6 +37,22 @@
 	opacity: 50%;
 }
 
+label{
+	float: top;
+	margin-right: 20px;
+}
+
+.form-li{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	width: 320px;
+}
+
+li{
+	list-style: none;
+}
+
 /*--- css for index page --*/
 #index-body{
 	display: flex;
@@ -200,11 +216,27 @@
 /*--- pricing page css --*/
 
 #pricing-main{
-	
+	display: grid;
+	grid-template-columns: 1.5fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr;
+	grid-template-areas:
+	'pricing-article pricing-article pricing-article'
+	'price-table price-table price-aside';
 }
+
+#pricing-article{
+	grid-area: pricing-article;
+}
+
+#pricing-table{
+	grid-area: price-table;
+}
+
+
 
 #pricing-aside{
     display: grid;
+	grid-area: price-aside;
 	grid-template-columns: 1fr;
 	grid-template-rows: 0.5fr 0.5fr 0.5fr;
     gap: 1.5rem;
@@ -222,6 +254,44 @@
 }
 #pricing-img-3{
 	grid-area: price-img-3;
+}
+
+/*--- contact page css--*/
+#contact-main{
+	display: grid;
+	grid-template-columns: 1.5fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.5fr;	
+	grid-template-areas: 
+	'form form contact-aside'
+	'form form contact-aside'
+	'form form contact-aside';
+}
+
+#contact-form{
+	grid-area: form;
+}
+
+
+#contact-aside{
+    display: grid;
+	grid-area: contact-aside;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    gap: 1.5rem;
+	grid-template-areas: 
+	'contact-img-1'
+	'contact-img-2'
+	'contact-img-3';
+}
+
+#contact-img-1{
+	grid-area: contact-img-1;
+}
+#contact-img-2{
+	grid-area: contact-img-2;
+}
+#contact-img-3{
+	grid-area: contact-img-3;
 }
 
 /*--- media querries --*/
@@ -306,9 +376,40 @@
 	.grid-banner-img{
 		display: none;
 	}
+	
+	/*-- pricing page changes ---*/
+	
+	#pricing-main{
+		grid-template-columns: 1.5fr 1fr;
+		grid-template-rows: 0.5fr 0.5fr 0.5fr;
+		grid-template-areas:
+		'price-table price-table' 
+		'price-aside price-aside';
+	}
+	
+	#pricing-article{
+		display: none;
+	}
+	
+	/*--- contact page changes --*/
+	
+	#contact-main{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.5fr;	
+	grid-template-areas: 
+	'form'
+	'form'
+	'contact-aside';
+	}
+
+	#contact-form{
+	grid-area: form;
+	}
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1199px){
+/*--- Changes for when tablet resolution --*/
+@media only screen and (min-width: 481px) and (max-width: 1179px){
 	#index-body{
 		width: 500px;
 		margin: auto;
@@ -318,7 +419,6 @@
 		display: flex;
 		flex-direction: column-reverse;
 	}
-	
 	
 	.index-figure{
 		float: left;
@@ -355,16 +455,52 @@
 	}
 	
 	#products-aside{
-	display: grid;
-	grid-template-columns: 2fr 2fr;
-    gap: 1.5rem;
-	grid-template-areas: 
-	'img-1 img-2';
+		display: grid;
+		grid-template-columns: 2fr 2fr;
+		gap: 1.5rem;
+		grid-template-areas: 
+		'img-1 img-2';
 	}
 	
 	.grid-footer{
 		grid-template-columns: 2fr 2fr;
 		grid-column-gap: 215px;
+	}
+	
+	/*--- prining page changes --*/
+	#pricing-main{
+		grid-template-columns: 1.5fr 1fr;
+		grid-template-rows: 0.5fr 0.5fr 0.5fr;
+		grid-template-areas:
+		'pricing-article pricing-article'
+		'price-table price-table' 
+		'price-aside price-aside';
+	}
+	
+	#pricing-aside{
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		'price-img-2 price-img-3';
+	}
+	
+	#pricing-img-1{
+		display: none;
+	}
+	
+		/*--- contact page changes --*/
+	
+	#contact-main{
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 0.5fr;	
+	grid-template-areas: 
+	'form  contact-aside'
+	'form  contact-aside'
+	'form  contact-aside';
+}
+
+	#contact-form{
+	grid-area: form;
 	}
 }
 
