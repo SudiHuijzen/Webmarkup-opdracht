@@ -406,6 +406,10 @@ li{
 	#contact-form{
 	grid-area: form;
 	}
+	
+	.form-li{
+		width: 250px;
+	}
 }
 
 /*--- Changes for when tablet resolution --*/
@@ -497,10 +501,11 @@ li{
 	'form  contact-aside'
 	'form  contact-aside'
 	'form  contact-aside';
-}
+	}
 
 	#contact-form{
 	grid-area: form;
 	}
-}
+	
 
+}
