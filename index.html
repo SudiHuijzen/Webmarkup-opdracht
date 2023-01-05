@@ -5,30 +5,45 @@
 	<meta charset="utf-8" />  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="icon" type="image/extreme-sports-icon" href="img/favicon-logo.png">
+	<meta name="author" content="Sudi Huijzen">
+	<meta name="description" content="Innovations in extreme sport gear">
 </head>
 	<body id="index-body">	
 		<header id="index-header">
-			<img src="img/pencil.jpg" alt="" class="banner-img">
-			<section>
+			<img src="img/future-logo.png" alt="" class="banner-img">
+			<section id="page-title">
 				<h1>Extreme sports</h1>
 				<h2>Extreme sports technologies</h2>
 			</section>
-			<a href="#" id="hamburger-menu">Menu</a>	
+			<nav class="dropdown-index">
+			<button class="dropbutton-index">MENU</button>
+				<section class="dropdown-content-index">
+					<a href="index.html">Home</a>
+					<a href="pricing.html">Products</a>
+					<a href="contact.html">Contact</a>
+				</section>
+			</nav>	
 		</header>
 		<nav role="navigation" class="nav-header">	
 			<ul class="nav-list">
-				<li class="index-li"><a href="index.html">Home</a></li>
-				<li class="index-li"><a href="products.html">Products</a></li>
-				<li class="index-li"><a href="pricing.html">Pricing</a></li>
-				<li class="index-li"><a href="contact.html">Contact</a></li>
+				<li class="nav-li"><a href="products.html">Products</a></li>
+				<li class="nav-li"><a href="pricing.html">Pricing</a></li>
+				<li class="nav-li"><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>	
-		<main id="index-main">
+		<video autoplay muted id="movie-pc">
+			<source src="img/movie-pc.mp4">		
+		</video>
+		<video autoplay muted id="movie-phone">
+			<source src="img/movie-phone.ogg"> 
+		</video>
+			<main id="index-main">	
 			<section id="index-section">
 				<article>
 					<figure class="index-figure">
-						<img src="img/pencil.jpg" alt="" class="index-img">
-						<figcaption>tekst</figcaption>
+						<img src="img/skateboarding.jpg" alt="shows legs of someone skateboarding" class="index-img">
+						<figcaption><small>&copy; dbknews.com</small></figcaption>
 					</figure>
 					<h2>Skateboarding</h2>
 					<p>The skateboard was invented in the late 1940s but didn’t become popular 
@@ -41,8 +56,8 @@
 				</article>
 				<article>
 					<figure class="index-figure">
-						<img src="img/pencil.jpg" alt="" class="index-img">
-						<figcaption>tekst</figcaption>
+						<img src="img/bmx.jpg" alt="someone riding a bmx bike" class="index-img">
+						<figcaption><small>&copy; redbull.com</small></figcaption>
 					</figure>
 					<h2>BMX</h2>
 					<p>BMX bikes have been around since the 1970s. They were inspired by motocross bikes. 
@@ -54,8 +69,8 @@
 				</article>
 				<article>
 					<figure class="index-figure">
-						<img src="img/pencil.jpg" alt="" class="index-img">
-						<figcaption>tekst</figcaption>
+						<img src="img/mountainboard-exp.jpg" alt="someone jumping with a mountainboard" class="index-img">
+						<figcaption><small>&copy; mbseurope.com</small></figcaption>
 					</figure>
 					<h2>Mountainboarding</h2>
 					<p>In the 1990s a new way to use a board was invented. Snowboards are usually limited to winter sports 
@@ -70,7 +85,7 @@
 			</section>
 			<aside id="index-aside">
 				<ol>
-					<h1>New</h1>
+					<h1>New technologies</h1>
 					<li class="index-li-aside">New protective gear for extreme sports</li>
 					<li class="index-li-aside">New film equipment to film your tricks</li>
 					<li class="index-li-aside">New drone technology to for better film shots</li>
@@ -80,10 +95,10 @@
 			</aside>
 		</main>
 		<footer id="index-footer">
-			<p>
+			<p id="index-copyright-statement">
 				<small>&copy; Copyright Sudi Huijzen</small>	
 			</p>
-			<p class="cookie-statement">
+			<p id="cookie-statement">
 				<small>@Cookie statement</small>
 			</p>
 		</footer>
