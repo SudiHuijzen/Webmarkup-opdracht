@@ -18,12 +18,12 @@ article{
 	padding: 5%;
 }
 
-a{
+.weblink{
 	color: #FFF;
 	text-decoration: none;
 }
 
-a:hover {
+.weblink:hover {
 	color: #e60000;
 	font-size:150%;
 }
